@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import * as userController from '../controllers/user.controller.js';
-import { body } from 'express-validator';
 import * as authMiddleware from '../middleware/auth.middleware.js';
+import { body } from 'express-validator';
+import * as userController from '../controllers/user.controller.js';
 
 const router = Router();
 
@@ -27,3 +27,4 @@ router.get('/all', authMiddleware.authUser, userController.getAllUsersController
 
 
 export default router;
+
